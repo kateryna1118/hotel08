@@ -42,7 +42,7 @@ public class RegistrationController {
 
         iUserService.addUser(user);
 
-        return "redirect:/registration";
+        return "redirect:/user";
     }
 
       @RequestMapping(value = "update")

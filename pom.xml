@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ua.softserve</groupId>
-    <artifactId>hotel07</artifactId>
-    <name>hotel07</name>
+    <artifactId>hotel08</artifactId>
+    <name>hotel08</name>
     <packaging>war</packaging>
     <version>1.0.0-BUILD-SNAPSHOT</version>
     <properties>
@@ -55,13 +55,13 @@
             <artifactId>javassist</artifactId>
             <version>3.12.1.GA</version>
         </dependency>
-		
+
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
 			<version>20030825.184428</version>
 		</dependency>
-            
+
 
 
         <dependency>
@@ -192,7 +192,24 @@
             <version>4.7</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.3.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+            <version>2.0.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+            <version>2.3.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <repositories>
 		<!-- For testing against latest Spring snapshots -->
@@ -215,6 +232,12 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+        </repository>
+        <repository>
+            <url>http://download.eclipse.org/rt/eclipselink/maven.repo/</url>
+            <id>eclipselink</id>
+            <layout>default</layout>
+            <name>Repository for library Library[eclipselink]</name>
         </repository>
     </repositories>
     <build>
